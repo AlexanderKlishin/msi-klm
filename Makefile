@@ -19,3 +19,7 @@ $(CPPOBJS): %.o: %.cpp
 clean:
 	rm -f *.o $(PROG)
 
+.PHONY: rpm
+rpm: $(PROG)
+	rpmbuild --define "_builddir $(shell pwd)" -bb msi-klm.spec
+

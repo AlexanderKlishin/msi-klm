@@ -210,7 +210,7 @@ int main(int argc, char **argv)
 
 	handle = hid_open(VENDOR_ID, PRODUCT_ID, NULL);
 	if (!handle) {
-		fprintf(stderr, "cannot open");
+		fprintf(stderr, "cannot open device\n");
 		return 1;
 	}
 
